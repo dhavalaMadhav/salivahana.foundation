@@ -19,6 +19,7 @@
             color: #333;
             background-color: #f5f7fa;
             font-size: 18px;
+            overflow-x: hidden;
         }
         
         /* Header Styles */
@@ -48,6 +49,7 @@
             font-weight: 800;
             color: #000;
             letter-spacing: -0.5px;
+            z-index: 1001;
         }
         
         .logo span {
@@ -80,6 +82,7 @@
             position: relative;
             padding: 8px 0;
             transition: color 0.3s;
+            white-space: nowrap;
         }
         
         nav ul li a:after {
@@ -114,6 +117,7 @@
             border: 2px solid #2c5282;
             outline: none;
             margin-left: 35px;
+            white-space: nowrap;
         }
         
         .header-button:hover {
@@ -461,7 +465,7 @@
         
         /* Section Common Styles */
         section {
-            padding: 100px 0;
+            /* padding: 100px 0; */
         }
         
         .section-header {
@@ -623,7 +627,7 @@
         
         .university-card {
             flex: 1;
-            min-width: 400px;
+            min-width: 300px;
             max-width: 550px;
             background-color: white;
             overflow: hidden;
@@ -940,7 +944,7 @@
         
         .profile-image {
             flex: 1;
-            min-width: 350px;
+            min-width: 300px;
         }
         
         .profile-img {
@@ -963,7 +967,7 @@
         
         .profile-info {
             flex: 1;
-            min-width: 350px;
+            min-width: 300px;
         }
         
         .profile-info h2 {
@@ -1131,7 +1135,7 @@
         
         .contact-container {
             display: flex;
-            gap: 60px;
+            gap: 0;
             flex-wrap: wrap;
             background-color: white;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -1195,7 +1199,7 @@
         
         .contact-right {
             flex: 1;
-            min-width: 350px;
+            min-width: 300px;
             padding: 80px 60px;
         }
         
@@ -1347,15 +1351,23 @@
         /* Responsive Styles */
         @media (max-width: 1200px) {
             .section-title {
-                font-size: 50px;
+                font-size: 48px;
             }
             
             .carousel-content h1 {
-                font-size: 54px;
+                font-size: 52px;
             }
             
             .bento-row {
                 flex-direction: column;
+            }
+            
+            .bento-large .metric-number {
+                font-size: 100px;
+            }
+            
+            .bento-large .metric-title {
+                font-size: 28px;
             }
             
             .step-description-left,
@@ -1370,19 +1382,19 @@
             .step-description-right {
                 padding-left: 60px;
             }
-            
-            .contact-left, .contact-right {
-                padding: 60px 40px;
-            }
         }
         
         @media (max-width: 1024px) {
             .section-title {
-                font-size: 46px;
+                font-size: 44px;
             }
             
             .hero {
-                height: 800px;
+                height: 750px;
+            }
+            
+            .carousel-content h1 {
+                font-size: 48px;
             }
             
             .stories-container {
@@ -1390,7 +1402,15 @@
             }
             
             .story-card {
-                flex: 0 0 380px;
+                flex: 0 0 360px;
+            }
+            
+            .university-name-overlay {
+                font-size: 36px;
+            }
+            
+            .profile-img {
+                height: 400px;
             }
         }
         
@@ -1404,6 +1424,8 @@
                 left: 50%;
                 transform: translateX(-50%);
                 margin-left: 0;
+                padding: 12px 24px;
+                font-size: 15px;
             }
             
             .menu-toggle {
@@ -1411,37 +1433,26 @@
             }
             
             .hero {
-                height: 700px;
+                height: 650px;
             }
             
             .carousel-content h1 {
-                font-size: 46px;
+                font-size: 42px;
             }
             
             .carousel-content p {
-                font-size: 22px;
+                font-size: 20px;
             }
             
             .carousel-dots {
-                bottom: 40px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
+                bottom: 30px;
             }
             
             .btn-primary, .btn-secondary {
                 width: 100%;
-                max-width: 350px;
-            }
-            
-            .university-card, .story-card {
-                min-width: 100%;
-            }
-            
-            .profile-container {
-                flex-direction: column;
+                max-width: 320px;
+                padding: 18px 30px;
+                font-size: 17px;
             }
             
             section {
@@ -1449,7 +1460,56 @@
             }
             
             .section-title {
+                font-size: 38px;
+            }
+            
+            .section-subtitle {
+                font-size: 20px;
+            }
+            
+            .bento-large {
+                padding: 40px 30px;
+            }
+            
+            .bento-small {
+                padding: 30px 25px;
+            }
+            
+            .bento-large .metric-number {
+                font-size: 80px;
+            }
+            
+            .bento-large .metric-title {
+                font-size: 24px;
+            }
+            
+            .metric-number {
                 font-size: 42px;
+            }
+            
+            .metric-title {
+                font-size: 20px;
+            }
+            
+            .university-card {
+                min-width: 100%;
+                max-width: 100%;
+            }
+            
+            .university-header {
+                padding: 30px 25px;
+            }
+            
+            .university-header h3 {
+                font-size: 28px;
+            }
+            
+            .university-info {
+                padding: 40px 30px;
+            }
+            
+            .university-info li {
+                font-size: 17px;
             }
             
             .stories-container {
@@ -1457,18 +1517,70 @@
             }
             
             .story-card {
-                flex: 0 0 340px;
+                flex: 0 0 320px;
+            }
+            
+            .student-image-wrapper {
+                height: 400px;
+            }
+            
+            .university-name-overlay {
+                font-size: 32px;
+            }
+            
+            .student-name {
+                font-size: 24px;
+            }
+            
+            .review-text {
+                font-size: 18px;
+            }
+            
+            .profile-container {
+                flex-direction: column;
+            }
+            
+            .profile-img {
+                height: 350px;
+            }
+            
+            .profile-info h2 {
+                font-size: 36px;
+            }
+            
+            .profile-info h3 {
+                font-size: 22px;
+            }
+            
+            .profile-info p {
+                font-size: 18px;
             }
             
             .process-step-wrapper {
                 flex-direction: column;
                 text-align: center;
+                margin-bottom: 80px;
             }
             
             .step-description-left,
             .step-description-right {
                 text-align: center;
-                padding: 30px 20px;
+                padding: 25px 15px;
+            }
+            
+            .step-number-center {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
+                margin: 20px 0;
+            }
+            
+            .step-content h3 {
+                font-size: 24px;
+            }
+            
+            .step-content p {
+                font-size: 17px;
             }
             
             .timeline-line {
@@ -1476,54 +1588,188 @@
             }
             
             .contact-left, .contact-right {
-                padding: 50px 30px;
+                padding: 50px 35px;
             }
             
             .contact-left h2 {
-                font-size: 38px;
+                font-size: 36px;
+            }
+            
+            .contact-form-title {
+                font-size: 34px;
             }
         }
         
         @media (max-width: 600px) {
             body {
-                font-size: 17px;
+                font-size: 16px;
             }
             
             .logo {
-                font-size: 24px;
+                font-size: 22px;
             }
             
             .header-button {
-                padding: 12px 24px;
-                font-size: 15px;
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .main-container {
+                width: 95%;
             }
             
             .hero {
-                height: 600px;
+                height: 550px;
             }
             
             .carousel-content h1 {
-                font-size: 38px;
+                font-size: 32px;
+                margin-bottom: 20px;
             }
             
             .carousel-content p {
-                font-size: 20px;
+                font-size: 18px;
+                margin-bottom: 35px;
+            }
+            
+            .carousel-nav-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .carousel-prev {
+                left: 10px;
+            }
+            
+            .carousel-next {
+                right: 10px;
+            }
+            
+            .carousel-dots {
+                bottom: 20px;
+                gap: 12px;
+            }
+            
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
+            
+            .dot.active {
+                width: 35px;
+            }
+            
+            .btn-primary, .btn-secondary {
+                padding: 16px 25px;
+                font-size: 16px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-header {
+                margin-bottom: 50px;
+                padding: 0 20px;
             }
             
             .section-title {
-                font-size: 36px;
+                font-size: 32px;
+                margin-bottom: 20px;
             }
             
             .section-subtitle {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+            
+            .bento-container {
+                padding: 0 20px;
+            }
+            
+            .bento-row {
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .bento-large {
+                padding: 35px 25px;
+                min-height: 280px;
+            }
+            
+            .bento-small {
+                padding: 25px 20px;
+            }
+            
+            .bento-large .metric-number {
+                font-size: 65px;
+            }
+            
+            .bento-large .metric-title {
                 font-size: 20px;
+                margin-bottom: 15px;
             }
             
-            .profile-info h2 {
-                font-size: 34px;
+            .bento-large .metric-description {
+                font-size: 17px;
             }
             
-            .contact-form-title {
-                font-size: 32px;
+            .metric-number {
+                font-size: 36px;
+            }
+            
+            .metric-title {
+                font-size: 18px;
+            }
+            
+            .metric-description {
+                font-size: 16px;
+            }
+            
+            .university-grid {
+                padding: 0 20px;
+                gap: 30px;
+            }
+            
+            .university-image {
+                height: 200px;
+            }
+            
+            .university-header {
+                padding: 25px 20px;
+            }
+            
+            .university-header h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            
+            .university-header p {
+                font-size: 17px;
+            }
+            
+            .university-info {
+                padding: 35px 25px;
+            }
+            
+            .university-info ul {
+                margin-bottom: 30px;
+            }
+            
+            .university-info li {
+                padding: 12px 0;
+                font-size: 16px;
+            }
+            
+            .university-info li i {
+                font-size: 18px;
+                margin-right: 15px;
+            }
+            
+            .university-button {
+                padding: 16px;
+                font-size: 17px;
             }
             
             .stories-container {
@@ -1531,13 +1777,180 @@
             }
             
             .story-card {
-                flex: 0 0 300px;
+                flex: 0 0 280px;
+            }
+            
+            .student-image-wrapper {
+                height: 350px;
+            }
+            
+            .university-name-overlay {
+                font-size: 28px;
+            }
+            
+            .student-info {
+                padding: 20px;
+            }
+            
+            .student-name {
+                font-size: 22px;
+            }
+            
+            .detail-label {
+                font-size: 12px;
+            }
+            
+            .detail-value {
+                font-size: 16px;
+            }
+            
+            .student-review {
+                padding: 0 20px;
+            }
+            
+            .review-text {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            
+            .review-author {
+                font-size: 16px;
             }
             
             .carousel-nav {
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+            
+            .profile-container {
+                padding: 0 20px;
+                gap: 40px;
+            }
+            
+            .profile-img {
+                height: 300px;
+                font-size: 80px;
+            }
+            
+            .profile-info h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            
+            .profile-info h3 {
                 font-size: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .profile-info p {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            
+            .profile-qualifications {
+                gap: 15px;
+                margin-top: 30px;
+            }
+            
+            .qualification-item {
+                padding: 12px 15px;
+                font-size: 16px;
+                gap: 10px;
+            }
+            
+            .qualification-item i {
+                font-size: 18px;
+            }
+            
+            .process-container {
+                padding: 0 20px;
+            }
+            
+            .process-timeline {
+                padding: 40px 0;
+            }
+            
+            .process-step-wrapper {
+                margin-bottom: 60px;
+            }
+            
+            .step-number-center {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                margin: 15px 0;
+            }
+            
+            .step-content h3 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            
+            .step-content p {
+                font-size: 16px;
+            }
+            
+            .contact-wrapper {
+                padding: 0 20px;
+            }
+            
+            .contact-left, .contact-right {
+                padding: 40px 25px;
+            }
+            
+            .contact-left h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+            
+            .contact-left p {
+                font-size: 17px;
+                margin-bottom: 30px;
+            }
+            
+            .contact-benefits li {
+                font-size: 16px;
+                padding-left: 30px;
+                margin-bottom: 15px;
+            }
+            
+            .contact-benefits li:before {
+                font-size: 20px;
+            }
+            
+            .contact-form-title {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            
+            .contact-form-subtitle {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .form-row .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-control {
+                padding: 12px;
+                font-size: 15px;
+            }
+            
+            .submit-button {
+                padding: 16px 30px;
+                font-size: 17px;
+                margin-top: 15px;
             }
             
             .floating-contact-widget {
@@ -1554,6 +1967,10 @@
                 font-size: 20px;
             }
             
+            .contact-options {
+                bottom: 60px;
+            }
+            
             .contact-option {
                 width: 45px;
                 height: 45px;
@@ -1563,23 +1980,67 @@
                 font-size: 18px;
             }
             
-            .form-row {
-                flex-direction: column;
-                gap: 0;
+            footer {
+                padding: 50px 0 30px;
+                width: 95%;
             }
             
-            .form-row .form-group {
-                margin-bottom: 25px;
+            .footer-container {
+                gap: 35px;
             }
             
-            .contact-left h2 {
-                font-size: 32px;
+            .footer-column {
+                min-width: 100%;
             }
             
-            .carousel-nav-btn {
-                width: 50px;
-                height: 50px;
+            .footer-column h3 {
                 font-size: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .footer-links li {
+                margin-bottom: 12px;
+            }
+            
+            .footer-links a {
+                font-size: 16px;
+            }
+            
+            .copyright {
+                margin-top: 40px;
+                padding-top: 30px;
+                font-size: 15px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 20px;
+            }
+            
+            .header-button {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+            
+            .carousel-content h1 {
+                font-size: 28px;
+            }
+            
+            .carousel-content p {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .stories-container {
+                padding: 0 30px;
+            }
+            
+            .story-card {
+                flex: 0 0 250px;
             }
         }
     </style>
@@ -1588,8 +2049,11 @@
     <!-- Header with Navigation -->
     <header>
         <div class="nav-container">
-            <div class="logo">Pathways<span></span></div>
+            <div class="logo">Academic<span>Pathways</span></div>
             
+            <button class="header-button">
+                <i class="fas fa-calendar-alt"></i> Book Consultation
+            </button>
             
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -1606,10 +2070,6 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-                        <button class="header-button">
-                <i class="fas fa-calendar-alt"></i> Book Consultation
-            </button>
-
         </div>
     </header>
 
@@ -1627,6 +2087,9 @@
             <li><a href="#process" class="mobile-menu-link">Process</a></li>
             <li><a href="#contact" class="mobile-menu-link">Contact</a></li>
         </ul>
+        <button class="header-button">
+            <i class="fas fa-calendar-alt"></i> Book Consultation
+        </button>
     </div>
 
     <!-- Floating Contact Widget -->
