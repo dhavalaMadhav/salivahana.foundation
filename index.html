@@ -6,6 +6,8 @@
     <title>Academic Pathways India</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* [All the previous CSS remains the same until the Process Section] */
+        
         /* Reset and Base Styles */
         * {
             margin: 0;
@@ -263,7 +265,7 @@
             justify-content: center;
             transition: all 0.3s ease;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-                        border: 2px solid #2c5282;
+            border: 2px solid #2c5282;
         }
         
         .contact-option i {
@@ -466,7 +468,7 @@
         
         /* Section Common Styles */
         section {
-            /* padding: 100px 0; */
+            padding: 100px 0;
         }
         
         .section-header {
@@ -1022,107 +1024,109 @@
             font-size: 22px;
         }
         
-        /* Process Section - Centered Timeline */
-        .process {
-            padding: 120px 0;
-            background-color: #f8f9fa;
-        }
-        
-        .process-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-        
-        .process-timeline {
-            position: relative;
-            padding: 60px 0;
-        }
-        
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent,
-                transparent 10px,
-                #2c5282 10px,
-                #2c5282 20px
-            );
-            transform: translateX(-50%);
-        }
-        
-        .process-step-wrapper {
-            display: flex;
-            align-items: center;
-            margin-bottom: 100px;
-            position: relative;
-            opacity: 0.4;
-            transition: opacity 0.5s ease;
-        }
-        
-        .process-step-wrapper.active {
-            opacity: 1;
-        }
-        
-        .process-step-wrapper:last-child {
-            margin-bottom: 0;
-        }
-        
-        .step-description-left,
-        .step-description-right {
-            flex: 1;
-            padding: 40px;
-        }
-        
-        .step-description-left {
-            text-align: right;
-            padding-right: 80px;
-        }
-        
-        .step-description-right {
-            text-align: left;
-            padding-left: 80px;
-        }
-        
-        .step-number-center {
-            width: 80px;
-            height: 80px;
-            background-color: #2c5282;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 800;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(44, 82, 130, 0.3);
-            position: relative;
-            z-index: 10;
-            flex-shrink: 0;
-            transition: transform 0.5s ease;
-        }
-        
-        .process-step-wrapper.active .step-number-center {
-            transform: scale(1.2);
-            box-shadow: 0 6px 20px rgba(44, 82, 130, 0.5);
-        }
-        
-        .step-content h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #222;
-            font-weight: 700;
-        }
-        
-        .step-content p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 19px;
-        }
+        /* Process Section - FIXED Centered Timeline */
+/* Process Section - Centered Timeline */
+.process {
+    padding: 120px 0;
+    background-color: #f8f9fa;
+}
+
+.process-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.process-timeline {
+    position: relative;
+    padding: 60px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 10px,
+        #2c5282 10px,
+        #2c5282 20px
+    );
+    transform: translateX(-50%);
+}
+
+.process-step-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    position: relative;
+    opacity: 0.4;
+    transition: opacity 0.5s ease;
+}
+
+.process-step-wrapper.active {
+    opacity: 1;
+}
+
+.process-step-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.step-description-left,
+.step-description-right {
+    flex: 1;
+    max-width: 45%;
+    padding: 40px;
+}
+
+.step-description-left {
+    text-align: right;
+    padding-right: 80px;
+}
+
+.step-description-right {
+    text-align: left;
+    padding-left: 80px;
+}
+
+.step-number-center {
+    width: 80px;
+    height: 80px;
+    background-color: #2c5282;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(44, 82, 130, 0.3);
+    z-index: 10;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+}
+
+.process-step-wrapper.active .step-number-center {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(44, 82, 130, 0.5);
+}
+
+.step-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.step-content p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 19px;
+}
         
         /* Contact Section */
         .contact {
@@ -1473,7 +1477,7 @@
             }
             
             section {
-                /* padding: 80px 0; */
+                padding: 80px 0;
             }
             
             .section-title {
@@ -1573,16 +1577,56 @@
                 font-size: 18px;
             }
             
-            .process-step-wrapper {
-                flex-direction: column;
-                text-align: center;
-                margin-bottom: 80px;
-            }
+/* Process section mobile - centered vertical list */
+/* Process section mobile */
+.process-step-wrapper {
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.step-description-left,
+.step-description-right {
+    order: 2;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.step-number-center {
+    order: 1;
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.step-description-left:empty,
+.step-description-right:empty {
+    display: none;
+}
+
+.step-content h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.step-content p {
+    font-size: 17px;
+    text-align: center;
+}
+
+.timeline-line {
+    display: none;
+}
+
             
             .step-description-left,
             .step-description-right {
                 text-align: center;
                 padding: 25px 15px;
+                visibility: visible !important;
+                max-width: 100%;
             }
             
             .step-number-center {
@@ -1590,6 +1634,12 @@
                 height: 70px;
                 font-size: 28px;
                 margin: 20px 0;
+                position: static;
+                transform: none;
+            }
+            
+            .process-step-wrapper.active .step-number-center {
+                transform: scale(1.2);
             }
             
             .step-content h3 {
@@ -1700,7 +1750,7 @@
             }
             
             section {
-                /* padding: 60px 0; */
+                padding: 60px 0;
             }
             
             .section-header {
@@ -2090,7 +2140,7 @@
     </style>
 </head>
 <body>
-    <!-- Header with Navigation -->
+        <!-- Header with Navigation -->
     <header>
         <div class="nav-container">
             <div class="logo">Pathways<span></span></div>            
@@ -2544,65 +2594,65 @@
                 <div class="process-timeline">
                     <div class="timeline-line"></div>
                     
-                    <!-- Step 1 -->
-                    <div class="process-step-wrapper" data-step="1">
-                        <div class="step-description-left">
-                            <div class="step-content">
-                                <h3>Initial Consultation & Profile Assessment</h3>
-                                <p>Comprehensive evaluation of academic records, competitive exam scores, and career goals to determine optimal university matches.</p>
-                            </div>
-                        </div>
-                        <div class="step-number-center">1</div>
-                        <div class="step-description-right"></div>
-                    </div>
-                    
-                    <!-- Step 2 -->
-                    <div class="process-step-wrapper" data-step="2">
-                        <div class="step-description-left"></div>
-                        <div class="step-number-center">2</div>
-                        <div class="step-description-right">
-                            <div class="step-content">
-                                <h3>Strategic University Selection</h3>
-                                <p>Based on assessment, we recommend the most suitable partner institutions that align with the student's profile and aspirations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 3 -->
-                    <div class="process-step-wrapper" data-step="3">
-                        <div class="step-description-left">
-                            <div class="step-content">
-                                <h3>Application Preparation & Enhancement</h3>
-                                <p>Guidance on preparing compelling application materials, including personal statements, recommendation letters, and portfolio development.</p>
-                            </div>
-                        </div>
-                        <div class="step-number-center">3</div>
-                        <div class="step-description-right"></div>
-                    </div>
-                    
-                    <!-- Step 4 -->
-                    <div class="process-step-wrapper" data-step="4">
-                        <div class="step-description-left"></div>
-                        <div class="step-number-center">4</div>
-                        <div class="step-description-right">
-                            <div class="step-content">
-                                <h3>Direct Liaison & Interview Preparation</h3>
-                                <p>We facilitate direct communication with university admissions teams and provide comprehensive interview coaching.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Step 5 -->
-                    <div class="process-step-wrapper" data-step="5">
-                        <div class="step-description-left">
-                            <div class="step-content">
-                                <h3>Admission Follow-up & Transition Support</h3>
-                                <p>Assistance with acceptance formalities, scholarship applications, and preparation for university transition.</p>
-                            </div>
-                        </div>
-                        <div class="step-number-center">5</div>
-                        <div class="step-description-right"></div>
-                    </div>
+<!-- Step 1 -->
+<div class="process-step-wrapper" data-step="1">
+    <div class="step-description-left">
+        <div class="step-content">
+            <h3>Initial Consultation & Profile Assessment</h3>
+            <p>Comprehensive evaluation of academic records, competitive exam scores, and career goals to determine optimal university matches.</p>
+        </div>
+    </div>
+    <div class="step-number-center">1</div>
+    <div class="step-description-right"></div>
+</div>
+
+<!-- Step 2 -->
+<div class="process-step-wrapper" data-step="2">
+    <div class="step-description-left"></div>
+    <div class="step-number-center">2</div>
+    <div class="step-description-right">
+        <div class="step-content">
+            <h3>Strategic University Selection</h3>
+            <p>Based on assessment, we recommend the most suitable partner institutions that align with the student's profile and aspirations.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Step 3 -->
+<div class="process-step-wrapper" data-step="3">
+    <div class="step-description-left">
+        <div class="step-content">
+            <h3>Application Preparation & Enhancement</h3>
+            <p>Guidance on preparing compelling application materials, including personal statements, recommendation letters, and portfolio development.</p>
+        </div>
+    </div>
+    <div class="step-number-center">3</div>
+    <div class="step-description-right"></div>
+</div>
+
+<!-- Step 4 -->
+<div class="process-step-wrapper" data-step="4">
+    <div class="step-description-left"></div>
+    <div class="step-number-center">4</div>
+    <div class="step-description-right">
+        <div class="step-content">
+            <h3>Direct Liaison & Interview Preparation</h3>
+            <p>We facilitate direct communication with university admissions teams and provide comprehensive interview coaching.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Step 5 -->
+<div class="process-step-wrapper" data-step="5">
+    <div class="step-description-left">
+        <div class="step-content">
+            <h3>Admission Follow-up & Transition Support</h3>
+            <p>Assistance with acceptance formalities, scholarship applications, and preparation for university transition.</p>
+        </div>
+    </div>
+    <div class="step-number-center">5</div>
+    <div class="step-description-right"></div>
+</div>
                 </div>
             </div>
         </section>
