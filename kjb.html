@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swaminarayan University Pathways</title>
+    <title>Academic Pathways India</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* [All the previous CSS remains the same until the Process Section] */
+        
         /* Reset and Base Styles */
         * {
             margin: 0;
@@ -1022,108 +1024,109 @@
             font-size: 22px;
         }
         
-        /* Process Section - Centered Timeline */
-        .process {
-            padding: 120px 0;
-            background-color: #f8f9fa;
-        }
+        /* Process Section - FIXED Centered Timeline */
+/* Process Section - Centered Timeline */
+.process {
+    padding: 120px 0;
+    background-color: #f8f9fa;
+}
 
-        .process-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
+.process-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
 
-        .process-timeline {
-            position: relative;
-            padding: 60px 0;
-        }
+.process-timeline {
+    position: relative;
+    padding: 60px 0;
+}
 
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent,
-                transparent 10px,
-                #2c5282 10px,
-                #2c5282 20px
-            );
-            transform: translateX(-50%);
-        }
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 10px,
+        #2c5282 10px,
+        #2c5282 20px
+    );
+    transform: translateX(-50%);
+}
 
-        .process-step-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 100px;
-            position: relative;
-            opacity: 0.4;
-            transition: opacity 0.5s ease;
-        }
+.process-step-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    position: relative;
+    opacity: 0.4;
+    transition: opacity 0.5s ease;
+}
 
-        .process-step-wrapper.active {
-            opacity: 1;
-        }
+.process-step-wrapper.active {
+    opacity: 1;
+}
 
-        .process-step-wrapper:last-child {
-            margin-bottom: 0;
-        }
+.process-step-wrapper:last-child {
+    margin-bottom: 0;
+}
 
-        .step-description-left,
-        .step-description-right {
-            flex: 1;
-            max-width: 45%;
-            padding: 40px;
-        }
+.step-description-left,
+.step-description-right {
+    flex: 1;
+    max-width: 45%;
+    padding: 40px;
+}
 
-        .step-description-left {
-            text-align: right;
-            padding-right: 80px;
-        }
+.step-description-left {
+    text-align: right;
+    padding-right: 80px;
+}
 
-        .step-description-right {
-            text-align: left;
-            padding-left: 80px;
-        }
+.step-description-right {
+    text-align: left;
+    padding-left: 80px;
+}
 
-        .step-number-center {
-            width: 80px;
-            height: 80px;
-            background-color: #2c5282;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: 800;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(44, 82, 130, 0.3);
-            z-index: 10;
-            flex-shrink: 0;
-            transition: transform 0.5s ease;
-        }
+.step-number-center {
+    width: 80px;
+    height: 80px;
+    background-color: #2c5282;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 800;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(44, 82, 130, 0.3);
+    z-index: 10;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+}
 
-        .process-step-wrapper.active .step-number-center {
-            transform: scale(1.2);
-            box-shadow: 0 6px 20px rgba(44, 82, 130, 0.5);
-        }
+.process-step-wrapper.active .step-number-center {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(44, 82, 130, 0.5);
+}
 
-        .step-content h3 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #222;
-            font-weight: 700;
-        }
+.step-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
 
-        .step-content p {
-            color: #555;
-            line-height: 1.8;
-            font-size: 19px;
-        }
+.step-content p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 19px;
+}
         
         /* Contact Section */
         .contact {
@@ -1420,33 +1423,34 @@
                 display: none;
             }
             
-            /* Updated mobile header layout - Menu button at right, header button centered */
+            /* Updated mobile header layout */
             .nav-container {
-                display: grid;
-                grid-template-columns: auto 1fr auto;
+                display: flex;
+                justify-content: space-between;
                 align-items: center;
                 width: 90%;
                 padding: 0 10px;
-                gap: 10px;
             }
             
             .logo {
-                grid-column: 1;
+                flex: 0 0 auto;
                 font-size: 22px;
             }
             
             .header-button {
-                grid-column: 2;
-                margin: 0;
+                flex: 1;
+                margin: 0 15px;
                 padding: 12px 20px;
                 font-size: 15px;
-                justify-self: center;
+                max-width: none;
+                text-align: center;
+                position: static;
+                transform: none;
             }
             
             .menu-toggle {
                 display: block;
-                grid-column: 3;
-                justify-self: end;
+                flex: 0 0 auto;
             }
             
             .hero {
@@ -1573,48 +1577,48 @@
                 font-size: 18px;
             }
             
-            /* Process section mobile - centered vertical list */
-            .process-step-wrapper {
-                flex-direction: column;
-                margin-bottom: 60px;
-            }
+/* Process section mobile - centered vertical list */
+/* Process section mobile */
+.process-step-wrapper {
+    flex-direction: column;
+    margin-bottom: 60px;
+}
 
-            .step-description-left,
-            .step-description-right {
-                order: 2;
-                max-width: 100%;
-                width: 100%;
-                text-align: center;
-                padding: 0 20px;
-            }
+.step-description-left,
+.step-description-right {
+    order: 2;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
 
-            .step-number-center {
-                order: 1;
-                width: 70px;
-                height: 70px;
-                font-size: 28px;
-                margin-bottom: 20px;
-            }
+.step-number-center {
+    order: 1;
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
 
-            .step-description-left:empty,
-            .step-description-right:empty {
-                display: none;
-            }
+.step-description-left:empty,
+.step-description-right:empty {
+    display: none;
+}
 
-            .step-content h3 {
-                font-size: 24px;
-                text-align: center;
-            }
+.step-content h3 {
+    font-size: 24px;
+    text-align: center;
+}
 
-            .step-content p {
-                font-size: 17px;
-                text-align: center;
-            }
+.step-content p {
+    font-size: 17px;
+    text-align: center;
+}
 
-            .timeline-line {
-                display: none;
-            }
-            
+.timeline-line {
+    display: none;
+} 
             .step-description-left,
             .step-description-right {
                 text-align: center;
@@ -1622,7 +1626,6 @@
                 visibility: visible !important;
                 max-width: 100%;
             }
-            
             .step-number-center {
                 width: 70px;
                 height: 70px;
@@ -1677,15 +1680,19 @@
             
             .logo {
                 font-size: 20px;
+                flex-shrink: 0;
             }
             
             .header-button {
                 padding: 10px 16px;
                 font-size: 14px;
+                margin: 0 10px;
+                min-width: 0;
             }
             
             .menu-toggle {
                 font-size: 24px;
+                flex-shrink: 0;
             }
             
             .main-container {
@@ -2100,6 +2107,7 @@
             .header-button {
                 padding: 8px 12px;
                 font-size: 13px;
+                margin: 0 8px;
             }
             
             .menu-toggle {
@@ -2129,13 +2137,10 @@
     </style>
 </head>
 <body>
-    <!-- Header with Navigation -->
+        <!-- Header with Navigation -->
     <header>
         <div class="nav-container">
             <div class="logo">Pathways<span></span></div>            
-            <button class="header-button">
-                <i class="fas fa-calendar-alt"></i> Book Consultation
-            </button>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -2151,6 +2156,9 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="header-button">
+                <i class="fas fa-calendar-alt"></i> Book Consultation
+            </button>
         </div>
     </header>
 
@@ -2197,11 +2205,11 @@
                     <!-- Slide 1 -->
                     <div class="carousel-slide slide-1">
                         <div class="carousel-content">
-                            <h1>Empowering Student Entrepreneurs at Swaminarayan University</h1>
-                            <p>We connect innovative students with Swaminarayan University's premier startup foundation programs and exclusive funding opportunities for their entrepreneurial ventures.</p>
+                            <h1>Strategic University Admissions Guidance in India</h1>
+                            <p>We specialize in connecting exceptional students with prestigious academic institutions across India through our exclusive advisory services.</p>
                             <div class="hero-buttons">
                                 <button class="btn-primary">
-                                    <i class="fas fa-rocket"></i> Explore Startup Programs
+                                    <i class="fas fa-university"></i> Explore Partner Institutions
                                 </button>
                                 <button class="btn-secondary">
                                     <i class="fas fa-handshake"></i> Begin Your Journey
@@ -2213,14 +2221,14 @@
                     <!-- Slide 2 -->
                     <div class="carousel-slide slide-2">
                         <div class="carousel-content">
-                            <h1>Launch Your Startup at Swaminarayan University</h1>
-                            <p>Access dedicated incubation centers, mentorship from industry leaders, and direct funding support to turn your innovative ideas into successful ventures.</p>
+                            <h1>Exclusive University Partnerships</h1>
+                            <p>Direct relationships with premier IITs, NITs and universities ensure priority consideration for our candidates in competitive admission cycles.</p>
                             <div class="hero-buttons">
                                 <button class="btn-primary">
-                                    <i class="fas fa-lightbulb"></i> View Innovation Support
+                                    <i class="fas fa-graduation-cap"></i> View University Profiles
                                 </button>
                                 <button class="btn-secondary">
-                                    <i class="fas fa-file-alt"></i> Funding Opportunities
+                                    <i class="fas fa-file-alt"></i> Review Admission Criteria
                                 </button>
                             </div>
                         </div>
@@ -2229,14 +2237,14 @@
                     <!-- Slide 3 -->
                     <div class="carousel-slide slide-3">
                         <div class="carousel-content">
-                            <h1>Transform Ideas into Thriving Businesses</h1>
-                            <p>Swaminarayan University's startup-focused curriculum and entrepreneurship ecosystem provide everything you need to launch and scale your venture.</p>
+                            <h1>Personalized Admission Strategy</h1>
+                            <p>Each student receives a customized admission plan tailored to their academic profile and career aspirations for India's top institutions.</p>
                             <div class="hero-buttons">
                                 <button class="btn-primary">
-                                    <i class="fas fa-users"></i> Meet Startup Mentors
+                                    <i class="fas fa-user-tie"></i> Meet Our Advisor
                                 </button>
                                 <button class="btn-secondary">
-                                    <i class="fas fa-chart-line"></i> Student Founders
+                                    <i class="fas fa-chart-line"></i> Success Stories
                                 </button>
                             </div>
                         </div>
@@ -2264,7 +2272,7 @@
         <section id="metrics" class="success-metrics">
             <div class="section-header">
                 <h2 class="section-title">Success Metrics</h2>
-                <p class="section-subtitle">Our track record in helping students launch successful startups at Swaminarayan University</p>
+                <p class="section-subtitle">Our track record of excellence in placing students at India's top universities and IITs</p>
             </div>
             
             <div class="bento-container">
@@ -2273,12 +2281,12 @@
                     <div class="bento-large">
                         <div class="metric-number">98%</div>
                         <div class="metric-title">Of our students are admitted to at least 1 of their Top 5 college choices.</div>
-                        <div class="metric-description">Students actively building ventures through Swaminarayan University's entrepreneurship programs</div>
+                        <div class="metric-description">Students placed in their preferred universities through our advisory services</div>
                     </div>
                     <div class="bento-small">
                         <div class="metric-number">7x</div>
                         <div class="metric-title">More Likely</div>
-                        <div class="metric-description">Our students are 7x more likely to launch successful startups within their first year</div>
+                        <div class="metric-description">Our students are 7x more likely to get into IITs and Top 15 engineering colleges</div>
                     </div>
                 </div>
                 
@@ -2288,15 +2296,16 @@
                         <div class="metric-number">1,349</div>
                         <div class="metric-title">Total Offers</div>
                         <div class="metric-description">Total offers to IITs and NITs received by our students</div>
-                    </div>                    <div class="bento-small">
+                    </div>
+                    <div class="bento-small">
                         <div class="metric-number">50+</div>
-                        <div class="metric-title">Active Startups</div>
-                        <div class="metric-description">Student-led ventures currently incubated at Swaminarayan University</div>
+                        <div class="metric-title">University Partnerships</div>
+                        <div class="metric-description">Exclusive relationships with top-tier institutions</div>
                     </div>
                     <div class="bento-small">
                         <div class="metric-number">24/7</div>
-                        <div class="metric-title">Mentor Access</div>
-                        <div class="metric-description">Round-the-clock guidance from industry experts and successful entrepreneurs</div>
+                        <div class="metric-title">Support Availability</div>
+                        <div class="metric-description">Round-the-clock guidance for students and parents</div>
                     </div>
                 </div>
             </div>
@@ -2305,53 +2314,53 @@
         <!-- Universities Section -->
         <section id="universities" class="universities">
             <div class="section-header">
-                <h2 class="section-title">Top Universities</h2>
-                <p class="section-subtitle">India's leading institutions for student entrepreneurship, offering comprehensive startup foundation programs and direct funding for innovative ideas.</p>
+                <h2 class="section-title">Partner Institutions</h2>
+                <p class="section-subtitle">We maintain exclusive advisory relationships with these premier universities, offering our clients priority consideration and streamlined admission pathways.</p>
             </div>
             
             <div class="university-grid">
-                <!-- Swaminarayan University Card 1 -->
+                <!-- University 1 -->
                 <div class="university-card">
                     <div class="university-image">
-                        <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/undefined_1712569315594.jpeg?width=640" alt="Swaminarayan University Campus">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="IIT Campus">
                     </div>
                     <div class="university-header">
-                        <h3>Swaminarayan University</h3>
-                        <p>Startup Innovation Hub | NAAC A++ Accredited</p>
+                        <h3>IIT Bombay</h3>
+                        <p>Established 1958 | NIRF Rank #1</p>
                     </div>
                     <div class="university-info">
                         <ul>
-                            <li><i class="fas fa-rocket"></i> Dedicated Startup Incubation Center</li>
-                            <li><i class="fas fa-money-bill-wave"></i> Direct Funding for Student Innovations</li>
-                            <li><i class="fas fa-lightbulb"></i> Entrepreneurship Foundation Courses</li>
-                            <li><i class="fas fa-users"></i> Mentorship from Industry Leaders</li>
-                            <li><i class="fas fa-handshake"></i> Strategic Investor Connections</li>
+                            <li><i class="fas fa-check-circle"></i> Top Engineering Institution</li>
+                            <li><i class="fas fa-check-circle"></i> 15+ Departments</li>
+                            <li><i class="fas fa-check-circle"></i> 98% Placement Rate</li>
+                            <li><i class="fas fa-check-circle"></i> 100+ International Collaborations</li>
+                            <li><i class="fas fa-check-circle"></i> World-class Research Facilities</li>
                         </ul>
                         <a href="#" class="university-button">
-                            <i class="fas fa-info-circle"></i> Explore Startup Programs & Funding
+                            <i class="fas fa-info-circle"></i> Detailed Profile & Admission Criteria
                         </a>
                     </div>
                 </div>
                 
-                <!-- Swaminarayan University Card 2 -->
+                <!-- University 2 -->
                 <div class="university-card">
                     <div class="university-image">
-                        <img src="https://media.collegedekho.com/media/img/institute/crawled_images/None/undefined_1712569315594.jpeg?width=640" alt="Innovation Center">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80" alt="University Campus">
                     </div>
                     <div class="university-header">
-                        <h3>Ganpat University</h3>
-                        <p>Center for Entrepreneurial Excellence</p>
+                        <h3>Delhi University</h3>
+                        <p>Established 1922 | NAAC A++ Accredited</p>
                     </div>
                     <div class="university-info">
                         <ul>
-                            <li><i class="fas fa-graduation-cap"></i> Startup Foundation Curriculum</li>
-                            <li><i class="fas fa-chart-line"></i> Business Development Workshops</li>
-                            <li><i class="fas fa-laptop-code"></i> Tech Startup Labs & Resources</li>
-                            <li><i class="fas fa-award"></i> Pitch Competitions & Funding Events</li>
-                            <li><i class="fas fa-globe"></i> Global Startup Network Access</li>
+                            <li><i class="fas fa-check-circle"></i> Premier Central University</li>
+                            <li><i class="fas fa-check-circle"></i> 90+ Affiliated Colleges</li>
+                            <li><i class="fas fa-check-circle"></i> 95% Placement Rate</li>
+                            <li><i class="fas fa-check-circle"></i> Diverse Academic Programs</li>
+                            <li><i class="fas fa-check-circle"></i> Global Alumni Network</li>
                         </ul>
                         <a href="#" class="university-button">
-                            <i class="fas fa-info-circle"></i> Learn About Innovation Support
+                            <i class="fas fa-info-circle"></i> Detailed Profile & Admission Criteria
                         </a>
                     </div>
                 </div>
@@ -2361,12 +2370,12 @@
         <!-- Student Stories Section -->
         <section id="stories" class="student-stories">
             <div class="section-header">
-                <h2 class="section-title">Student Founder Stories</h2>
-                <p class="section-subtitle">Meet students who launched successful startups with Swaminarayan University's funding and mentorship support.</p>
+                <h2 class="section-title">Student Success Stories</h2>
+                <p class="section-subtitle">Meet students who secured admission to their dream universities through our advisory services.</p>
             </div>
             
             <div class="stories-container">
-                <button class="carousel-nav prev" id="storyPrevBtn">
+                <button class="carousel-nav prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 
@@ -2376,23 +2385,23 @@
                         <div class="student-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Student" class="student-image">
                             <div class="university-overlay">
-                                <div class="accepted-badge">Founded At</div>
-                                <div class="university-name-overlay">Swaminarayan U.</div>
+                                <div class="accepted-badge">Accepted to</div>
+                                <div class="university-name-overlay">IIT Bombay</div>
                             </div>
                         </div>
                         <div class="student-info">
                             <div class="student-name">Arjun Sharma</div>
                             <div class="student-details-row">
                                 <div class="detail-item">
-                                    <div class="detail-label">Startup</div>
-                                    <div class="detail-value">EdTech Platform</div>
+                                    <div class="detail-label">Branch</div>
+                                    <div class="detail-value">Computer Science</div>
                                 </div>
                             </div>
                         </div>
                         <div class="student-review">
                             <div class="review-content">
-                                <p class="review-text">"Swaminarayan University's startup incubator provided ₹15 lakhs in seed funding and connected me with mentors who helped scale my EdTech venture to 50,000+ users."</p>
-                                <p class="review-author">— Arjun Sharma, Founder | Funded by Swaminarayan U.</p>
+                                <p class="review-text">"The personalized guidance I received was instrumental in my acceptance to IIT Bombay. The team helped me showcase my unique strengths and craft a compelling application."</p>
+                                <p class="review-author">— Arjun Sharma, IIT Bombay Class of 2029</p>
                             </div>
                         </div>
                     </div>
@@ -2402,23 +2411,23 @@
                         <div class="student-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80" alt="Student" class="student-image">
                             <div class="university-overlay">
-                                <div class="accepted-badge">Founded At</div>
-                                <div class="university-name-overlay">Swaminarayan U.</div>
+                                <div class="accepted-badge">Accepted to</div>
+                                <div class="university-name-overlay">IIT Delhi</div>
                             </div>
                         </div>
                         <div class="student-info">
                             <div class="student-name">Priya Patel</div>
                             <div class="student-details-row">
                                 <div class="detail-item">
-                                    <div class="detail-label">Startup</div>
-                                    <div class="detail-value">HealthTech Innovation</div>
+                                    <div class="detail-label">Branch</div>
+                                    <div class="detail-value">Electrical Engineering</div>
                                 </div>
                             </div>
                         </div>
                         <div class="student-review">
                             <div class="review-content">
-                                <p class="review-text">"The university's entrepreneurship foundation courses and direct investor connections helped me secure Series A funding for my healthcare startup within 18 months."</p>
-                                <p class="review-author">— Priya Patel, CEO | Swaminarayan Incubated</p>
+                                <p class="review-text">"Thanks to Academic Pathways, I was able to present my passion for technology in a way that resonated with IIT Delhi's admissions committee. Truly grateful!"</p>
+                                <p class="review-author">— Priya Patel, IIT Delhi Class of 2028</p>
                             </div>
                         </div>
                     </div>
@@ -2428,23 +2437,23 @@
                         <div class="student-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Student" class="student-image">
                             <div class="university-overlay">
-                                <div class="accepted-badge">Founded At</div>
-                                <div class="university-name-overlay">Swaminarayan U.</div>
+                                <div class="accepted-badge">Accepted to</div>
+                                <div class="university-name-overlay">BITS Pilani</div>
                             </div>
                         </div>
                         <div class="student-info">
                             <div class="student-name">Rohan Mehta</div>
                             <div class="student-details-row">
                                 <div class="detail-item">
-                                    <div class="detail-label">Startup</div>
-                                    <div class="detail-value">FinTech Solutions</div>
+                                    <div class="detail-label">Branch</div>
+                                    <div class="detail-value">Mechanical Engineering</div>
                                 </div>
                             </div>
                         </div>
                         <div class="student-review">
                             <div class="review-content">
-                                <p class="review-text">"Swaminarayan's startup ecosystem gave me access to world-class mentors, funding, and a peer network that accelerated my FinTech venture from idea to market leader."</p>
-                                <p class="review-author">— Rohan Mehta, Founder | Funded Startup</p>
+                                <p class="review-text">"The strategic approach to my application made all the difference. I felt supported throughout the entire process and couldn't be happier with the outcome."</p>
+                                <p class="review-author">— Rohan Mehta, BITS Pilani Class of 2029</p>
                             </div>
                         </div>
                     </div>
@@ -2454,23 +2463,23 @@
                         <div class="student-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=800&q=80" alt="Student" class="student-image">
                             <div class="university-overlay">
-                                <div class="accepted-badge">Founded At</div>
-                                <div class="university-name-overlay">Swaminarayan U.</div>
+                                <div class="accepted-badge">Accepted to</div>
+                                <div class="university-name-overlay">NIT Trichy</div>
                             </div>
                         </div>
                         <div class="student-info">
                             <div class="student-name">Ananya Reddy</div>
                             <div class="student-details-row">
                                 <div class="detail-item">
-                                    <div class="detail-label">Startup</div>
-                                    <div class="detail-value">SaaS Platform</div>
+                                    <div class="detail-label">Branch</div>
+                                    <div class="detail-value">Civil Engineering</div>
                                 </div>
                             </div>
                         </div>
                         <div class="student-review">
                             <div class="review-content">
-                                <p class="review-text">"The university's funding support and entrepreneurship courses provided the foundation I needed to build a profitable SaaS business serving 200+ enterprise clients."</p>
-                                <p class="review-author">— Ananya Reddy, CEO | Swaminarayan Alumni</p>
+                                <p class="review-text">"Academic Pathways helped me highlight my projects and research in a compelling way. NIT Trichy was my dream college and they made it a reality!"</p>
+                                <p class="review-author">— Ananya Reddy, NIT Trichy Class of 2028</p>
                             </div>
                         </div>
                     </div>
@@ -2480,23 +2489,23 @@
                         <div class="student-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Student" class="student-image">
                             <div class="university-overlay">
-                                <div class="accepted-badge">Founded At</div>
-                                <div class="university-name-overlay">Swaminarayan U.</div>
+                                <div class="accepted-badge">Accepted to</div>
+                                <div class="university-name-overlay">IIT Madras</div>
                             </div>
                         </div>
                         <div class="student-info">
                             <div class="student-name">Vikram Singh</div>
                             <div class="student-details-row">
                                 <div class="detail-item">
-                                    <div class="detail-label">Startup</div>
-                                    <div class="detail-value">AgriTech Venture</div>
+                                    <div class="detail-label">Branch</div>
+                                    <div class="detail-value">Aerospace Engineering</div>
                                 </div>
                             </div>
                         </div>
                         <div class="student-review">
                             <div class="review-content">
-                                <p class="review-text">"From pitch competitions to investor meetings, Swaminarayan University's innovation support helped me raise ₹2 crores to revolutionize farming technology."</p>
-                                <p class="review-author">— Vikram Singh, Founder | AgriTech Pioneer</p>
+                                <p class="review-text">"The interview preparation and essay guidance were exceptional. I felt confident throughout the entire admissions process thanks to their expertise."</p>
+                                <p class="review-author">— Vikram Singh, IIT Madras Class of 2029</p>
                             </div>
                         </div>
                     </div>
@@ -2506,29 +2515,29 @@
                         <div class="student-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Student" class="student-image">
                             <div class="university-overlay">
-                                <div class="accepted-badge">Founded At</div>
-                                <div class="university-name-overlay">Swaminarayan U.</div>
+                                <div class="accepted-badge">Accepted to</div>
+                                <div class="university-name-overlay">Delhi University</div>
                             </div>
                         </div>
                         <div class="student-info">
                             <div class="student-name">Divya Kumar</div>
                             <div class="student-details-row">
                                 <div class="detail-item">
-                                    <div class="detail-label">Startup</div>
-                                    <div class="detail-value">Social Enterprise</div>
+                                    <div class="detail-label">Course</div>
+                                    <div class="detail-value">Economics (Hons)</div>
                                 </div>
                             </div>
                         </div>
                         <div class="student-review">
                             <div class="review-content">
-                                <p class="review-text">"Swaminarayan's entrepreneurship program connected me with impact investors who believed in my vision for sustainable social change through business innovation."</p>
-                                <p class="review-author">— Divya Kumar, Social Entrepreneur</p>
+                                <p class="review-text">"From application strategy to final acceptance, the team was there every step of the way. Delhi University was my top choice and I'm thrilled to be attending!"</p>
+                                <p class="review-author">— Divya Kumar, Delhi University Class of 2028</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <button class="carousel-nav next" id="storyNextBtn">
+                <button class="carousel-nav next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
             </div>
@@ -2562,10 +2571,15 @@
                             <i class="fas fa-award"></i>
                             <span>Certified Educational Consultant</span>
                         </div>
+                        <div class="qualification-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>150+ University Partnerships</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Process Section -->
         <section id="process" class="process">
             <div class="section-header">
@@ -2696,14 +2710,14 @@
                 </div>
             </div>
         </section>
-        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3>Swaminarayan Pathways</h3>
-                <p style="font-size: 18px; line-height: 1.6;">Specialized startup advisory connecting aspiring student entrepreneurs with Swaminarayan University's innovation ecosystem, funding opportunities, and mentorship programs.</p>
+                <h3>AcademicPathways</h3>
+                <p style="font-size: 18px; line-height: 1.6;">Specialized advisory services connecting exceptional students with premier academic institutions across India through strategic partnerships and personalized guidance.</p>
             </div>
             
             <div class="footer-column">
@@ -2711,21 +2725,21 @@
                 <ul class="footer-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#metrics">Success Metrics</a></li>
-                    <li><a href="#universities">Startup Programs</a></li>
+                    <li><a href="#universities">Partner Institutions</a></li>
                     <li><a href="#advisor">Advisor Profile</a></li>
-                    <li><a href="#stories">Student Founders</a></li>
-                    <li><a href="#process">Launch Process</a></li>
+                    <li><a href="#stories">Student Stories</a></li>
+                    <li><a href="#process">Our Process</a></li>
                 </ul>
             </div>
             
             <div class="footer-column">
-                <h3>Startup Services</h3>
+                <h3>Services</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Funding Assistance</a></li>
-                    <li><a href="#">Incubation Support</a></li>
-                    <li><a href="#">Mentor Network</a></li>
-                    <li><a href="#">Pitch Coaching</a></li>
-                    <li><a href="#">Investor Connections</a></li>
+                    <li><a href="#">University Selection</a></li>
+                    <li><a href="#">Application Strategy</a></li>
+                    <li><a href="#">Interview Preparation</a></li>
+                    <li><a href="#">Document Guidance</a></li>
+                    <li><a href="#">Admission Follow-up</a></li>
                 </ul>
             </div>
             
@@ -2733,14 +2747,14 @@
                 <h3>Connect With Us</h3>
                 <ul class="footer-links">
                     <li><a href="#"><i class="fas fa-phone"></i> +91 98765 43210</a></li>
-                    <li><a href="#"><i class="fas fa-envelope"></i> startups@swaminarayan.edu</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Swaminarayan University, Gujarat</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> info@academicpathways.in</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> New Delhi, India</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="copyright">
-            <p>&copy; 2023 Swaminarayan University Pathways. All rights reserved. | Student Entrepreneurship & Innovation Support</p>
+            <p>&copy; 2023 AcademicPathways Advisory. All rights reserved. | Professional Educational Advisory Services</p>
         </div>
     </footer>
 
@@ -2795,7 +2809,7 @@
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your interest in Swaminarayan University startup programs! We will contact you within 24 hours.');
+            alert('Thank you for your inquiry. We will contact you within 24 hours.');
             contactForm.reset();
         });
         
@@ -2913,81 +2927,43 @@
         
         moveCarouselToSlide(0);
         
-        // Student Stories Carousel Functionality with Centering on Mobile
+        // Student Stories Carousel Functionality
         const storiesCarousel = document.getElementById('storiesCarousel');
-        const prevButton = document.getElementById('storyPrevBtn');
-        const nextButton = document.getElementById('storyNextBtn');
-        const storyCards = document.querySelectorAll('.story-card');
+        const prevButton = document.querySelector('.carousel-nav.prev');
+        const nextButton = document.querySelector('.carousel-nav.next');
         
-        let currentStoryIndex = 0;
+        const cardWidth = 420;
+        const gap = 40;
+        const scrollAmount = cardWidth + gap;
         let storiesTouchStartX = 0;
         let storiesTouchEndX = 0;
         
-        function centerStoryCard(index) {
-            if (window.innerWidth <= 900) {
-                // Mobile/Tablet: Center the card
-                const card = storyCards[index];
-                if (card) {
-                    const containerWidth = storiesCarousel.offsetWidth;
-                    const cardWidth = card.offsetWidth;
-                    const cardLeft = card.offsetLeft;
-                    const scrollPosition = cardLeft - (containerWidth / 2) + (cardWidth / 2);
-                    
-                    storiesCarousel.scrollTo({
-                        left: scrollPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    currentStoryIndex = index;
-                }
-            } else {
-                // Desktop: Normal scroll
-                const cardWidth = 420;
-                const gap = 40;
-                const scrollAmount = cardWidth + gap;
-                
-                storiesCarousel.scrollTo({
-                    left: scrollAmount * index,
-                    behavior: 'smooth'
-                });
-            }
-        }
-        
         prevButton.addEventListener('click', () => {
-            if (currentStoryIndex > 0) {
-                currentStoryIndex--;
-                centerStoryCard(currentStoryIndex);
-            }
+            storiesCarousel.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
         });
         
         nextButton.addEventListener('click', () => {
-            if (currentStoryIndex < storyCards.length - 1) {
-                currentStoryIndex++;
-                centerStoryCard(currentStoryIndex);
-            }
-        });
-        
-        // Click on card to center it (mobile/tablet)
-        storyCards.forEach((card, index) => {
-            card.addEventListener('click', () => {
-                if (window.innerWidth <= 900) {
-                    centerStoryCard(index);
-                }
+            storiesCarousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
             });
         });
         
         // Keyboard navigation for stories
         storiesCarousel.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') {
-                if (currentStoryIndex > 0) {
-                    currentStoryIndex--;
-                    centerStoryCard(currentStoryIndex);
-                }
+                storiesCarousel.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
             } else if (e.key === 'ArrowRight') {
-                if (currentStoryIndex < storyCards.length - 1) {
-                    currentStoryIndex++;
-                    centerStoryCard(currentStoryIndex);
-                }
+                storiesCarousel.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             }
         });
         
@@ -3005,31 +2981,19 @@
             const swipeThreshold = 50;
             
             if (storiesTouchStartX - storiesTouchEndX > swipeThreshold) {
-                // Swipe left - next card
-                if (currentStoryIndex < storyCards.length - 1) {
-                    currentStoryIndex++;
-                    centerStoryCard(currentStoryIndex);
-                }
+                // Swipe left - scroll right
+                storiesCarousel.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             } else if (storiesTouchEndX - storiesTouchStartX > swipeThreshold) {
-                // Swipe right - previous card
-                if (currentStoryIndex > 0) {
-                    currentStoryIndex--;
-                    centerStoryCard(currentStoryIndex);
-                }
+                // Swipe right - scroll left
+                storiesCarousel.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
             }
         }
-        
-        // Initialize first card centered on mobile
-        if (window.innerWidth <= 900) {
-            centerStoryCard(0);
-        }
-        
-        // Re-center on window resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 900) {
-                centerStoryCard(currentStoryIndex);
-            }
-        });
         
         // Process Steps Scroll Animation
         const processSteps = document.querySelectorAll('.process-step-wrapper');
